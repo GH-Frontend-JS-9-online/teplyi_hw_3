@@ -32,11 +32,13 @@
 </header>
 
 <ul class="m-menu">
-        <li><a href="#" class="nav-block">Overview</a></li>
-        <li><a href="#" class="nav-block">About Fork</a></li>
-        <li><a href="#" class="nav-block">Buying Options</a></li>
-        <li><a href="#" class="nav-block">Support</a></li>
-    </ul>
+    <div class="close-menu">&times;</div>
+    <li><a href="#" class="nav-block">Home</a></li>
+    <li><a href="#" class="nav-block">Overview</a></li>
+    <li><a href="#" class="nav-block">About Fork</a></li>
+    <li><a href="#" class="nav-block">Buying Options</a></li>
+    <li><a href="#" class="nav-block">Support</a></li>
+</ul>
 
 <section class="hero">
     <div class="container">
@@ -355,17 +357,31 @@
             <p>560 Judah St & 15th Ave, Apt 5 <br /> San Francisco, CA, 230903</p>
         </div>
 
-            <div class="col-12 col-md-3">
-               <h3>Info</h3>
-               <p>
-                   Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex commodo consequat. Autem vel hendrerit iriure dolor in hendrerit.
-                </p>
-            </div>
-         </div>
-      </footer>
+        <div class="col-12 col-md-3">
+            <h3>Info</h3>
+            <p>
+                Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex commodo consequat. Autem vel hendrerit iriure dolor in hendrerit.
+            </p>
+        </div>
+    </div>
+</footer>
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+    $(function() {
+        var link = $('.m-menu-link');
+        var close = $('.close-menu');
+        var menu = $('.m-menu');
+        link.on('click', function(event){
+            event.preventDefault();
+            menu.toggleClass('m-menu-active');
+        });
+    })
+</script>
 </body>
 </html>
