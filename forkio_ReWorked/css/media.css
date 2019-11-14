@@ -129,6 +129,10 @@
         margin-bottom: 20px;
     }
 
+    .m-menu { 
+        display: none;
+    }
+
     /* site-footer */
     
     .site-footer p {
@@ -148,7 +152,7 @@
     }
 
     .m-menu { 
-        display: flex;
+        display: none;
         flex-direction: column;
         position: absolute;
         width: 100%;
@@ -161,6 +165,7 @@
     }
 
     .m-menu-active {
+        display: flex;
         transform: translateX(0%);
     }
 
